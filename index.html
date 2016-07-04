@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>am surveys - Welcome Page</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/full-slider.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript">
+// Dropdown Menu Fade    
+jQuery(document).ready(function(){
+    $(".dropdown").hover(
+        function() { $('.dropdown-menu', this).stop().fadeIn("fast");
+        },
+        function() { $('.dropdown-menu', this).stop().fadeOut("fast");
+    });
+});
+</script>
+
+<style>
+.navbar-fixed-top{
+
+    background-color: #FFffff;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #ccc;
+    -webkit-box-shadow: 0 8px 6px -6px #666;
+    -moz-box-shadow: 0 8px 6px -6px #666;
+    box-shadow: 0 8px 6px -6px #666;
+    font-weight:600;
+
+}
+
+.active{
+    border-top: 4px solid #59AFD5;
+}
+.navbar-fixed-top .navbar-nav > li > a{
+    color:#333333;
+}
+
+.navbar-fixed-top .navbar-nav > li > a:hover{
+    color:#59AFD5;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > .dropdown > a .caret{
+	border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+.navbar-default .navbar-brand{
+	color:#fff;
+}
+.menu-large {
+  position: static !important;
+}
+.megamenu{
+  padding: 20px 0px;
+  width:90%;
+  margin-left:70px
+}
+.megamenu> li > ul {
+  padding: 0;
+  margin: 0;
+}
+.megamenu> li > ul > li {
+  list-style: none;
+}
+.megamenu> li > ul > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #333333;
+  white-space: normal;
+}
+.megamenu> li ul > li > a:hover,
+.megamenu> li ul > li > a:focus {
+  text-decoration: none;
+  color: #59AFD5;
+  background-color: #f5f5f5;
+}
+.megamenu.disabled > a,
+.megamenu.disabled > a:hover,
+.megamenu.disabled > a:focus {
+  color: #999999;
+}
+.megamenu.disabled > a:hover,
+.megamenu.disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: not-allowed;
+}
+.megamenu.dropdown-header {
+  color: #428bca;
+  font-size: 18px;
+}
+
+
+@media (max-width: 768px) {
+  .megamenu{
+    margin-left: 0 ;
+    margin-right: 0 ;
+  }
+  .megamenu> li {
+    margin-bottom: 30px;
+  }
+  .megamenu> li:last-child {
+    margin-bottom: 0;
+  }
+  .megamenu.dropdown-header {
+    padding: 3px 15px !important;
+
+  }
+  .navbar-nav .open .dropdown-menu .dropdown-header{
+	color:#fff;
+  }
+  
+  
+}
+
+
+.card {
+    margin-top: 0px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-clip: padding-box;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding-top: 20px;
+}
+.card span.card-title {
+    color: #a9302a;
+    font-size: 24px;
+    font-weight: 300;
+    /*text-transform: uppercase;*/
+}
+
+
+.card .card-content {
+    padding: 16px 16px 16px 16px;
+    border-radius: 0 0 2px 2px;
+    background-clip: padding-box;
+    box-sizing: border-box;
+}
+.card .card-content p {
+    margin: 0;
+    color: inherit;
+}
+.card .card-content span.card-title {
+    line-height: 48px;
+}
+.card .card-action {
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 16px;
+}
+.card .card-action a {
+    color: #ffab40;
+    margin-right: 16px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+.card .card-action a:hover {
+    color: #ffd8a6;
+    text-decoration: none;
+}
+.card .card-image span.card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+}
+</style>
+
+</head>
+
+<body style="">
+<!--E74C3C -->
+    <!-- Navigation -->
+    <nav>
+  <div class="container navbar-fixed-top navbar-collapse" style="">
+	<div class="navbar-header">
+		 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+         <a class="navbar-brand" href="index.html">
+                   <img src="images/logo.png" class="img-responsive" alt="logo" width=99 height=64 style="margin-top:-7px;padding-left:20px"/>
+         </a>
+	</div>
+    <div class="navbar-header">
+		 
+        <h3 style="padding-top:0px"> </h3>
+       
+	</div>
+    <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav pull-right" style="padding-right:30px">
+       <li class="active"><a href="index.html">Home</a></li>
+       <li><a href="aboutus.html">About us</a></li>
+        
+       <li class="dropdown menu-large">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Services <b class="caret"></b></a>				
+				<ul class="dropdown-menu megamenu row" style="width:80%;margin-left:130px">
+					<li class="col-sm-4">
+						<ul>
+							<li class="dropdown-header">Survey Services</li>
+							<li><a href="services.php">Crop / farm compensation services</a></li>
+							<li class="disabled"><a href="#">Mine development surveys</a></li>
+							<li><a href="#">Topographical surveys</a></li>
+                            <li><a href="#">Route line and utility location surveys</a></li>
+							<li><a href="#">Deeds and land title registration</a></li>
+							<li><a href="#">Subdivision surveys / setting out of lands</a></li>
+							<li><a href="#">Construction layout / setting out</a></li>
+                            <li><a href="#">Earthworks and volumetric analysis</a></li>
+							
+						</ul>
+					</li>
+					<li class="col-sm-4">
+						<ul>
+							<li class="dropdown-header">GIS Services</li>
+							<li><a href="#">Geo spacial data capture and analysis</a></li>
+							<li><a href="#">GIS Geodatabase Management</a></li>
+							<li><a href="#">Development of GIS applications</a></li>
+							<li><a href="#">GIS training</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Photogrammetric/mapping services</li>
+							<li><a href="#">Photogrammetric mapping services</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Satellite Imagery Services</li>
+                            <li><a href="#">Satellite Imagery</a></li>
+
+						</ul>
+					</li>
+					<li class="col-sm-4">
+						<ul>
+                            <li class="dropdown-header">Training Services</li>
+                            <li><a href="#">Training</a></li>
+                            <li class="divider"></li>
+							<li class="dropdown-header">Other Services</li>
+							<li><a href="#">Agricultural Improvement and land access programs</a></li>
+							<li><a href="#">Bathymeric Survey</a></li>
+							<li><a href="#">Training Services</a></li>
+							
+						</ul>
+					</li>
+					
+				</ul>
+
+			</li>
+       <li class="dropdown menu-large">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Satellite Imagery <b class="caret"></b> </a>
+                  <ul class="dropdown-menu megamenu row" style="width:80%;margin-left:130px">
+                    <li class="col-sm-3">
+						<ul>
+                            <li class="dropdown-header">Satellite Imagery services</li>
+                          
+							<li><a href="#">Sale of Satellite imagery</a></li>
+							<li><a href="services.php">Forestry and environmental management</a></li>
+							<li class="disabled"><a href="#">Geological studies</a></li>
+							<li><a href="#">Agriculture</a></li>
+                            													
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">&nbsp;</li>
+                            <li><a href="#">Civil Institutions</a></li>
+							<li><a href="#">Vessel report services</a></li>
+							<li><a href="#">Surface movement monitoring</a></li>
+							<li><a href="#">Oil spillage monitoring</a></li>
+							
+						</ul>
+					</li>
+                    <li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">&nbsp;</li>
+                            
+							<li><a href="#">Defense and security</a></li>
+							<li><a href="#">The geo elevation range</a></li>
+							<li><a href="#">Ground controls</a></li>
+							<li><a href="#">Maritime</a></li>
+							
+						</ul>
+					</li>
+                    <li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">&nbsp;</li>
+                           
+							<li><a href="#">The geo monitor</a></li>
+							<li><a href="#">Pixel Factory</a></li>
+							<li><a href="#">Cloud Services</a></li>
+							<li><a href="#">Geo-store</a></li>
+                            <li><a href="#">Mining, oil and gas</a></li>
+							
+						</ul>
+					</li>
+                  </ul>
+            </li>
+            <li><a href="ourprojects.html">Projects</a></li>
+           <li><a href="#">Careers</a></li>
+           <li><a href="#">Knowledge Hub</a></li>
+           <li><a href="contact.php">Contact</a></li>
+    </ul>
+    
+    </div>
+     
+  </div>
+
+</nav>
+
+    <!-- Full Page Image Background Carousel Header -->
+    <header id="myCarousel" class="carousel slide" style="height:80%">
+
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+             <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url(images/header-bg.jpg);"></div>
+                <div class="carousel-caption">
+                    <div class="row" style="height:350px">
+                        <div class="col-md-8" style="text-align:left;margin-left:-200px;">
+                            <h1>Welcome to A-M Surveys Limited</h1>
+                            <h4>Geo-presence perfected</h4>
+                            <br/>
+                            <h3>We offer top-notch services ranging from<br/> tropical surveys to satellite imagery</h3>
+                            <h5>Contact us now</h5>
+                        </div>
+                        <div class="col-md-4">
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url(images/1.jpg);"></div>
+                <div class="carousel-caption">
+                   <div class="row" style="height:350px">
+                    	<div class="col-md-8" style="text-align:left;margin-left:-200px;">
+                         <h1 style="">Geographical Information Systems</h1>
+                         <h3>we build GIS for data management and presentation purposes</h3>
+                         <br/>
+                         <p><a href="signup.php"><button type="button" class="btn btn-success btn-lg">Learn more &raquo;</button></a></p>
+                         <br/>
+                         <p>You are welcome to learn more</p>
+                        </div>
+                        <div class="col-md-4">
+                         
+                        </div>
+                        
+                    </div>
+                </div><!-- 284358 6A828B F8F4EB 629192 A47177-->
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url(images/bokeh-eiffel-tower-hd-wallpaper.jpg)"></div>
+                <div class="carousel-caption">
+                    <div class="row" style="height:350px">
+                    	<div class="col-md-8" style="text-align:left;margin-left:-200px;">
+                         <h1>Photogrammetric mapping <br/>and remote sensory services</h1>
+                         <h3>accurate geometric measurements using photographs</h3>
+                         <br/>
+                         <p><a href="signup.php"><button type="button" style="" class="btn btn-primary btn-lg">photogrammetric services &raquo;</button></a></p>
+                        </div>
+                        <div class="col-md-4">
+                         
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url(images/header-bg.jpg);"></div>
+                <div class="carousel-caption">
+
+                    <div class="row" style="height:350px">
+                        <div class="col-md-8" style="text-align:left;margin-left:-200px;">
+                            <h1>Unparalleled tropical surveys</h1>
+                            <h3>the art of surveying land shapes and models</h3>
+                            <br/>
+                            <p><a href="signup.php"><button type="button" style="" class="btn btn-danger btn-lg">Learn more &raquo;</button></a></p>
+                            <br/>
+                            <p>Contact us for the best survey services</p>
+                        </div>
+                        <div class="col-md-4">
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls >
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a-->
+
+    </header>
+
+    <!-- Page Content -->
+    <section class="container-fluid">
+    <div class="row">
+    	<div class="col-md-12">
+        
+        <h1 style="text-align:center">Our Range of Services</h1>
+        <p style="text-align:center">We offer a wide range of services to suit the survey needs of our cherished clients</p>
+
+        </div>
+    </div>
+<div class="row" style="padding:50px 50px;height:auto;">
+       	  
+            <div class="col-md-3" style="text-align:center">
+                <div class="card">
+                    <div class="card-image">
+                         <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                            </span>
+                    </div>
+
+                    <div class="card-content" style="">
+                        <span class="card-title" style="margin-top: 0px">Surveys</span>
+                        <p>Top-notch tropical surveys.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3" style="text-align:center">
+
+                <div class="card">
+                    <div class="card-image">
+                         <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                            </span>
+                    </div>
+
+                    <div class="card-content" style="">
+                        <span class="card-title" style="margin-top: 0px">GIS Services</span>
+                        <p>Geographic Information Services.</p>
+                    </div>
+
+                </div>
+            </div>
+
+             <div class="col-md-3" style="text-align:center">
+
+                 <div class="card">
+                     <div class="card-image">
+                         <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                            </span>
+                     </div>
+
+                     <div class="card-content" style="">
+                         <span class="card-title" style="margin-top: 0px">Photogrammetry</span>
+                         <p>Photogrammetric services.</p>
+                     </div>
+
+                 </div>
+
+            </div>
+            <div class="col-md-3" style="text-align:center">
+
+                <div class="card">
+                    <div class="card-image">
+                         <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
+                            </span>
+                    </div>
+
+                    <div class="card-content" style="">
+                        <span class="card-title" style="margin-top: 0px;color:#a9302a">Remote Sensing</span>
+                        <p>Remote sensing and mapping.</p>
+                    </div>
+
+                </div>
+
+            </div>
+            
+    </div>
+    </section>
+    <section class="container-fluid" style="padding: 50px">
+        <div class="row">
+
+            <div class="col-md-2">
+                <div class="panel panel-default" id="sidebar" style="border: none;">
+                    <div class="panel-heading" style="background-color:#888;color:#fff;">Latest News</div>
+                    <div class="panel-body">
+                        <ul class="nav nav-stacked">
+                            <li><a href="#">Upcoming event</a></li>
+                            <li><a href="#">Drilling of bore holes</a></li>
+                            <li><a href="#">Asanko mines survey</a></li>
+                            <li><a href="#">Upcoming event</a></li>
+                            <li><a href="#">Drilling of bore holes</a></li>
+                            <li><a href="#">Asanko mines survey</a></li>
+
+                        </ul>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel" id="midCol">
+                    <div class="panel-heading" style="background-color:#555;color:#eee;">Featured Projects</div>
+                    <div class="panel-body">
+
+                        <!--img class="img-responsive" src="//placehold.it/300/77CCDD/66BBCC"-->
+
+                        <div class="well">
+                            <img src="images/bg_iphone.png" class="img-responsive">
+                            <h3><a href="http://getbootstrap.com">Bootstrap 3 is Here.</a></h3>
+                            <p>
+                                In simple terms, a responsive web design figures out what resolution of
+                                device it's being served on. Flexible grids then size correctly to fit
+                                the screen.
+                            </p>
+                            <p><a href="http://www.bootply.com/bootstrap-3-migration-guide" target="ext">Read our migration guide for help with upgrading to Bootstrap 3.</a></p>
+                      </div>
+
+
+                        <hr>
+                        <div class="well">
+                        <img src="images/bg_iphone.png" class="img-responsive">
+                        <h3><a href="http://getbootstrap.com">Bootstrap 3 is Here.</a></h3>
+                        <p>
+                            In simple terms, a responsive web design figures out what resolution of
+                            device it's being served on. Flexible grids then size correctly to fit
+                            the screen.
+                        </p>
+                        <p><a href="http://www.bootply.com/bootstrap-3-migration-guide" target="ext">Read our migration guide for help with upgrading to Bootstrap 3.</a></p>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+        <div class="col-md-7">
+            <div class="panel">
+                <div class="panel-heading" style="background-color:#111;color:#fff;">Top Stories</div>
+                <div class="panel-body">
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h2>The Year of Responsive Design.</h2>
+                            2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.
+                            <br><br>
+                            <button class="btn btn-default">More</button>
+                        </div>
+                        <div class="col col-sm-4">
+                            <!--a href="#"><img src="//placehold.it/300x120/77CCDD/66BBCC" class="img-responsive"></a-->
+                            <div class="text-muted"><small>Aug 15 / John Pierce</small></div>
+                            <p>
+                                Web design has come a long way since 1999.
+                            </p>
+                            <hr>
+                            <!--a href="#"><img src="//placehold.it/300x120/77CCDD/66BBCC" class="img-responsive"></a-->
+                            <div class="text-muted"><small>Aug 15 / Wilson Traiker</small></div>
+                            <p>
+                                The "flat" look was a big trend this year.
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-7">
+                            "Mobile first" and "unobtrusive JavaScript" (AKA: "progressive enhancement") are strategies for when a new site design is being considered. These are related concepts that predated RWD: browsers of basic mobile phones do not understand JavaScript or media queries, so the recommended practice is to create a basic web site then enhance it for smart phones and PCs—rather than try "graceful degradation" to make a complex, image-heavy site work on the most basic mobile phones.
+                            <br><br>
+                            Media Queries is a CSS3 module allowing content rendering to adapt to conditions such as screen resolution (e.g. smartphone vs. high definition screen). It became a W3C recommended standard in June 2012.[1] and is a cornerstone technology of Responsive Web Design.
+                        </div>
+                        <div class="col-md-5">
+                            <div class="panel">
+                                <div class="panel-heading" style="background-color:#555;color:#eee;">Knowledge Hub</div>
+                                <div class="panel-body">
+
+                                    <!--img class="img-responsive" src="//placehold.it/300/77CCDD/66BBCC"-->
+
+                                    <div class="well">
+                                        <img src="images/blue.jpg" class="img-responsive">
+                                        <h3><a href="http://getbootstrap.com">Bootstrap 3 is Here.</a></h3>
+
+                                        <p><a href="http://www.bootply.com/bootstrap-3-migration-guide" target="ext">Read our migration guide for help with upgrading to Bootstrap 3.</a></p>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div><!--/panel-->
+
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/bg_smartphones.jpg" class="img-responsive">
+                        </div>
+                        <div class="col-md-6">
+                            <h1>There is still a lot to be said about the Responsive Web.</h1>
+                        </div>
+                    </div>
+
+
+                </div><!--/panel-body-->
+            </div>
+        </div>
+        </div>
+    </section>
+
+        <footer class="container-fluid" style="width: 100%;height:150px; background-image: url(images/blue.jpg);margin:0px;padding: 20px;border-bottom: 3px solid #fff;border-top: 3px solid #fff;">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="row" style="padding: 30px;">
+                        <div class="col-md-2">
+                            <a href="aboutus.html" style="color: #fff;"><p>  About us</p> </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="ourprojects.html" style="color: #fff;"><p>  Projects</p> </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#" style="color: #fff;"><p> Careers</p> </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#" style="color: #fff;"><p> Knowledge Hub</p> </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#" style="color: #fff;"><p> Contacts</p> </a>
+                        </div>
+                        <div class="col-md-1">
+                            <a href="#" style="color: #fff;"><p> Contacts</p> </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row" style="text-align: center;padding: 30px;">
+
+                        <div class="col-md-4"><i class="fa-3x fa fa-facebook-square" style="color:#ffffff"></i></div>
+                        <div class="col-md-4"><i class="fa-3x fa fa-twitter-square" style="margin-right:15px;color:#ffffff"></i></div>
+                        <div class="col-md-4"><i class="fa-3x fa fa-linkedin-square" style="margin-right:15px;color:#ffffff"></i></div>
+                    </div>
+                </div>
+                <div class="col-md-2"  style="text-align: center;padding: 30px;">
+                    <img src="images/logo.png" class="img-responsive"/>
+                </div>
+
+            </div>
+
+        </footer>
+        <footer class="container-fluid" style="width: 100%;height:50px;background-color: #555555;margin:0px;padding: 20px;"></footer>
+
+
+        <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 8000 //changes the speed
+    })
+	
+	
+	$('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+    </script>
+
+</body>
+
+</html>

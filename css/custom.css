@@ -1,0 +1,52 @@
+/* CSS Document */
+
+.navbar-nav {
+    margin: 7.5px -15px;
+	
+}
+.navbar-nav > li > a {
+    line-height: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+	color:#333;
+	
+}
+.service-item {
+    margin-bottom: 30px;
+}
+
+.tabs{
+	border-radius:0px;
+	-moz-border-radius:0px;
+	}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+   border:none;
+     background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.8) 100%, rgba(255, 255, 255, 0.8) 100%);
+	background: -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 100%, rgba(255, 255, 255, 0.8) 100%);
+	background: linear-gradient(top, rgba(255, 255, 255, 0.8) 100%, rgba(255, 255, 255, 0.8) 100%);
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 100%, rgba(255, 255, 255, 0.8) 100%);
+    border-color: #ddd #ddd transparent;
+    border-image: none;
+   	color:#000;
+   	font-size:24px;
+    cursor: default;
+}
+.nav-tabs > li > a {
+    border: none;
+    border-radius: 0 0 0 0;
+    line-height: 1.42857;
+    margin-right: 2px;
+	background: -moz-linear-gradient(top, rgba(000, 000, 000, 0.8) 100%, rgba(000, 000, 000, 0.8) 100%);
+	background: -o-linear-gradient(top, rgba(000, 000, 000, 0.8) 100%, rgba(000, 000, 000, 0.8) 100%);
+	background: linear-gradient(top, rgba(000, 000, 000, 0.8) 100%, rgba(000, 000, 000, 0.8) 100%);
+	background: -webkit-linear-gradient(top, rgba(000, 000, 000, 0.8) 100%, rgba(000, 000, 000, 0.8) 100%);
+	color:#fff;
+}
+
+.list-group a:hover{
+	
+	text-decoration:underline;
+	background-color:#fff;
+	opacity:.8;
+	}
+

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>am surveys - Welcome Page</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/full-slider.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        // Dropdown Menu Fade
+        jQuery(document).ready(function(){
+            $(".dropdown").hover(
+                    function() { $('.dropdown-menu', this).stop().fadeIn("fast");
+                    },
+                    function() { $('.dropdown-menu', this).stop().fadeOut("fast");
+                    });
+        });
+    </script>
+
+    <style>
+        .navbar-fixed-top{
+
+            background-color: #FFffff;
+            border-bottom:1px solid #ccc;
+            border-top:1px solid #ccc;
+            -webkit-box-shadow: 0 8px 6px -6px #666;
+            -moz-box-shadow: 0 8px 6px -6px #666;
+            box-shadow: 0 8px 6px -6px #666;
+            font-weight:600;
+
+        }
+
+        .active{
+            border-top: 4px solid #59AFD5;
+        }
+        .navbar-fixed-top .navbar-nav > li > a{
+            color:#333333;
+        }
+
+        .navbar-fixed-top .navbar-nav > li > a:hover{
+            color:#59AFD5;
+            background-color: transparent;
+        }
+        .navbar-default .navbar-nav > .dropdown > a .caret{
+            border-top-color: #fff;
+            border-bottom-color: #fff;
+        }
+        .navbar-default .navbar-brand{
+            color:#fff;
+        }
+        .menu-large {
+            position: static !important;
+        }
+        .megamenu{
+            padding: 20px 0px;
+            width:90%;
+            margin-left:70px
+        }
+        .megamenu> li > ul {
+            padding: 0;
+            margin: 0;
+        }
+        .megamenu> li > ul > li {
+            list-style: none;
+        }
+        .megamenu> li > ul > li > a {
+            display: block;
+            padding: 3px 20px;
+            clear: both;
+            font-weight: normal;
+            line-height: 1.428571429;
+            color: #333333;
+            white-space: normal;
+        }
+        .megamenu> li ul > li > a:hover,
+        .megamenu> li ul > li > a:focus {
+            text-decoration: none;
+            color: #59AFD5;
+            background-color: #f5f5f5;
+        }
+        .megamenu.disabled > a,
+        .megamenu.disabled > a:hover,
+        .megamenu.disabled > a:focus {
+            color: #999999;
+        }
+        .megamenu.disabled > a:hover,
+        .megamenu.disabled > a:focus {
+            text-decoration: none;
+            background-color: transparent;
+            background-image: none;
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            cursor: not-allowed;
+        }
+        .megamenu.dropdown-header {
+            color: #428bca;
+            font-size: 18px;
+        }
+
+
+        @media (max-width: 768px) {
+            .megamenu{
+                margin-left: 0 ;
+                margin-right: 0 ;
+            }
+            .megamenu> li {
+                margin-bottom: 30px;
+            }
+            .megamenu> li:last-child {
+                margin-bottom: 0;
+            }
+            .megamenu.dropdown-header {
+                padding: 3px 15px !important;
+
+            }
+            .navbar-nav .open .dropdown-menu .dropdown-header{
+                color:#fff;
+            }
+
+
+        }
+
+
+        .card {
+            margin-top: 0px;
+            box-sizing: border-box;
+            border-radius: 2px;
+            background-clip: padding-box;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            padding-top: 20px;
+        }
+        .card span.card-title {
+            color: #a9302a;
+            font-size: 24px;
+            font-weight: 300;
+            /*text-transform: uppercase;*/
+        }
+
+
+        .card .card-content {
+            padding: 16px 16px 16px 16px;
+            border-radius: 0 0 2px 2px;
+            background-clip: padding-box;
+            box-sizing: border-box;
+        }
+        .card .card-content p {
+            margin: 0;
+            color: inherit;
+        }
+        .card .card-content span.card-title {
+            line-height: 48px;
+        }
+        .card .card-action {
+            border-top: 1px solid rgba(160, 160, 160, 0.2);
+            padding: 16px;
+        }
+        .card .card-action a {
+            color: #ffab40;
+            margin-right: 16px;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+        }
+        .card .card-action a:hover {
+            color: #ffd8a6;
+            text-decoration: none;
+        }
+        .card .card-image span.card-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 16px;
+        }
+    </style>
+
+</head>
+
+<body style="">
+
+<!-- Navigation -->
+<nav>
+    <div class="container navbar-fixed-top navbar-collapse" style="background-color:#fff;border-bottom:1px solid #ccc;
+	border-top:1px solid #ccc;
+	-webkit-box-shadow: 0 8px 6px -6px #666;
+    -moz-box-shadow: 0 8px 6px -6px #666;
+    box-shadow: 0 8px 6px -6px #666;">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" class="img-responsive" alt="logo" width="85" height="52" style="margin-top:-7px;padding-left:20px"/>
+            </a>
+        </div>
+        <div class="navbar-header">
+
+            <h3 style="padding-top:0px"> </h3>
+
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav pull-right" style="padding-right:30px">
+                <li><a href="index.html">Home</a></li>
+                <li  class="active"><a href="aboutus.html">About us</a></li>
+
+                <li class="dropdown menu-large">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Services <b class="caret"></b></a>
+                    <ul class="dropdown-menu megamenu row" style="width:80%;margin-left:130px">
+                        <li class="col-sm-4">
+                            <ul>
+                                <li class="dropdown-header">Survey Services</li>
+                                <li><a href="services.php">Crop / farm compensation services</a></li>
+                                <li class="disabled"><a href="#">Mine development surveys</a></li>
+                                <li><a href="#">Topographical surveys</a></li>
+                                <li><a href="#">Route line and utility location surveys</a></li>
+                                <li><a href="#">Deeds and land title registration</a></li>
+                                <li><a href="#">Subdivision surveys / setting out of lands</a></li>
+                                <li><a href="#">Construction layout / setting out</a></li>
+                                <li><a href="#">Earthworks and volumetric analysis</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="col-sm-4">
+                            <ul>
+                                <li class="dropdown-header">GIS Services</li>
+                                <li><a href="#">Geo spacial data capture and analysis</a></li>
+                                <li><a href="#">GIS Geodatabase Management</a></li>
+                                <li><a href="#">Development of GIS applications</a></li>
+                                <li><a href="#">GIS training</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Photogrammetric mapping</li>
+                                <li><a href="#">Photogrammetric mapping sservices</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-sm-4">
+                            <ul>
+                                <li class="dropdown-header">Other Services</li>
+                                <li><a href="#">Agricultural Improvement and land access programs</a></li>
+                                <li><a href="#">Bathymeric Survey</a></li>
+                                <li><a href="#">Training Services</a></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </li>
+                <li class="dropdown menu-large">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Satellite Imagery <b class="caret"></b> </a>
+                    <ul class="dropdown-menu megamenu row" style="width:80%;margin-left:130px">
+                        <li class="col-sm-3">
+                            <ul>
+                                <li class="dropdown-header">Satellite Imagery services</li>
+
+                                <li><a href="#">Sale of Satellite imagery</a></li>
+                                <li><a href="services.php">Forestry and environmental management</a></li>
+                                <li class="disabled"><a href="#">Geological studies</a></li>
+                                <li><a href="#">Agriculture</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="col-sm-3">
+                            <ul>
+                                <li class="dropdown-header">&nbsp;</li>
+                                <li><a href="#">Civil Institutions</a></li>
+                                <li><a href="#">Vessel report services</a></li>
+                                <li><a href="#">Surface movement monitoring</a></li>
+                                <li><a href="#">Oil spillage monitoring</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="col-sm-3">
+                            <ul>
+                                <li class="dropdown-header">&nbsp;</li>
+
+                                <li><a href="#">Defense and security</a></li>
+                                <li><a href="#">The geo elevation range</a></li>
+                                <li><a href="#">Ground controls</a></li>
+                                <li><a href="#">Maritime</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="col-sm-3">
+                            <ul>
+                                <li class="dropdown-header">&nbsp;</li>
+
+                                <li><a href="#">The geo monitor</a></li>
+                                <li><a href="#">Pixel Factory</a></li>
+                                <li><a href="#">Cloud Services</a></li>
+                                <li><a href="#">Geo-store</a></li>
+                                <li><a href="#">Mining, oil and gas</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="ourprojects.html">Projects</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Knowledge Hub</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!--&lt;!&ndash; Full Page Image Background Carousel Header &ndash;&gt;-->
+<!--<header id="myCarousel" class="carousel slide" style="height:80%">-->
+
+
+    <!--&lt;!&ndash; Indicators &ndash;&gt;-->
+    <!--<ol class="carousel-indicators">-->
+        <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
+        <!--<li data-target="#myCarousel" data-slide-to="1"></li>-->
+        <!--<li data-target="#myCarousel" data-slide-to="2"></li>-->
+        <!--<li data-target="#myCarousel" data-slide-to="3"></li>-->
+    <!--</ol>-->
+
+    <!--&lt;!&ndash; Wrapper for Slides &ndash;&gt;-->
+    <!--<div class="carousel-inner">-->
+        <!--<div class="item active">-->
+            <!--&lt;!&ndash; Set the first background image using inline CSS below. &ndash;&gt;-->
+            <!--<div class="fill" style="background-image:url(images/header-bg.jpg);"></div>-->
+            <!--<div class="carousel-caption">-->
+                <!--<div class="row" style="height:350px">-->
+                    <!--<div class="col-lg-8" style="text-align:left;margin-left:-200px;">-->
+                        <!--<h1>Welcome to A-M Surveys Limited</h1>-->
+                        <!--<h4>Geo-presence perfected</h4>-->
+                        <!--<br/>-->
+                        <!--<h3>We offer top-notch services ranging from<br/> tropical surveys to satellite imagery</h3>-->
+                        <!--<h5>Contact us now</h5>-->
+                    <!--</div>-->
+                    <!--<div class="col-lg-4">-->
+
+                    <!--</div>-->
+
+                <!--</div>-->
+            <!--</div>-->
+
+        <!--</div>-->
+        <!--<div class="item">-->
+            <!--&lt;!&ndash; Set the second background image using inline CSS below. &ndash;&gt;-->
+            <!--<div class="fill" style="background-image:url(images/1.jpg);"></div>-->
+            <!--<div class="carousel-caption">-->
+                <!--<div class="row" style="height:350px">-->
+                    <!--<div class="col-lg-8" style="text-align:left;margin-left:-200px;">-->
+                        <!--<h1 style="">Geographical Information Systems</h1>-->
+                        <!--<h3>we build GIS for data management and presentation purposes</h3>-->
+                        <!--<br/>-->
+                        <!--<p><a href="signup.php"><button type="button" class="btn btn-success btn-lg">Learn more &raquo;</button></a></p>-->
+                        <!--<br/>-->
+                        <!--<p>You are welcome to learn more</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-lg-4">-->
+
+                    <!--</div>-->
+
+                <!--</div>-->
+            <!--</div>&lt;!&ndash; 284358 6A828B F8F4EB 629192 A47177&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="item">-->
+            <!--&lt;!&ndash; Set the third background image using inline CSS below. &ndash;&gt;-->
+            <!--<div class="fill" style="background-image:url(images/bokeh-eiffel-tower-hd-wallpaper.jpg)"></div>-->
+            <!--<div class="carousel-caption">-->
+                <!--<div class="row" style="height:350px">-->
+                    <!--<div class="col-lg-8" style="text-align:left;margin-left:-200px;">-->
+                        <!--<h1>Photogrammetric mapping <br/>and remote sensory services</h1>-->
+                        <!--<h3>accurate geometric measurements using photographs</h3>-->
+                        <!--<br/>-->
+                        <!--<p><a href="signup.php"><button type="button" style="" class="btn btn-primary btn-lg">photogrammetric services &raquo;</button></a></p>-->
+                    <!--</div>-->
+                    <!--<div class="col-lg-4">-->
+
+                    <!--</div>-->
+
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="item">-->
+            <!--&lt;!&ndash; Set the third background image using inline CSS below. &ndash;&gt;-->
+            <!--<div class="fill" style="background-image:url(images/header-bg.jpg);"></div>-->
+            <!--<div class="carousel-caption">-->
+
+                <!--<div class="row" style="height:350px">-->
+                    <!--<div class="col-lg-8" style="text-align:left;margin-left:-200px;">-->
+                        <!--<h1>Unparalleled tropical surveys</h1>-->
+                        <!--<h3>the art of surveying land shapes and models</h3>-->
+                        <!--<br/>-->
+                        <!--<p><a href="signup.php"><button type="button" style="" class="btn btn-danger btn-lg">Learn more &raquo;</button></a></p>-->
+                        <!--<br/>-->
+                        <!--<p>Contact us for the best survey services</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-lg-4">-->
+
+                    <!--</div>-->
+
+                <!--</div>-->
+
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; Controls >-->
+    <!--<a class="left carousel-control" href="#myCarousel" data-slide="prev">-->
+        <!--<span class="icon-prev"></span>-->
+    <!--</a>-->
+    <!--<a class="right carousel-control" href="#myCarousel" data-slide="next">-->
+        <!--<span class="icon-next"></span>-->
+    <!--</a&ndash;&gt;-->
+
+<!--</header>-->
+
+<!-- Page Content -->
+
+<div class="container-fluid">
+    <div class="row" style="padding:50px 50px;height:auto;margin-top:100px">
+        <div class="col-md-2">
+            <div class="panel panel-default" id="sidebar" style="border-radius: 0px;-moz-border-radius : 0px;border: none;">
+                <div class="panel-heading" style="background-color:#888;color:#fff;">Latest News</div>
+                <div class="panel-body">
+                    <ul class="nav nav-stacked">
+                        <li><a href="#">Upcoming event</a></li>
+                        <li><a href="#">Drilling of bore holes</a></li>
+                        <li><a href="#">Asanko mines survey</a></li>
+                        <li><a href="#">Upcoming event</a></li>
+                        <li><a href="#">Drilling of bore holes</a></li>
+                        <li><a href="#">Asanko mines survey</a></li>
+
+                    </ul>
+                    <!--div class="accordion" id="accordion2">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                    Adverting
+                                </a>
+                            </div>
+                            <div id="collapseOne" class="accordion-body collapse in">
+                                <div class="accordion-inner">
+                                    Content here for links, ads, etc..
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                    Upcoming Events
+                                </a>
+                            </div>
+                            <div id="collapseTwo" class="accordion-body collapse">
+                                <div class="accordion-inner">
+                                    Another collapse panel. Content here for links, ads, etc..
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/acc-->
+
+
+
+                    <div class="col col-span-12">
+                        <i class="icon-2x icon-facebook"></i>&nbsp;
+                        <i class="icon-2x icon-twitter"></i>&nbsp;
+                        <i class="icon-2x icon-linkedin"></i>&nbsp;
+                        <i class="icon-2x icon-pinterest"></i>
+                    </div>
+
+                </div><!--/panel body-->
+            </div><!--/panel-->
+        </div><!--/end left column-->
+        <!--<div class="col-md-3">-->
+            <!--<div class="panel" id="midCol">-->
+                <!--<div class="panel-heading" style="background-color:#555;color:#eee;">Projects</div>-->
+                <!--<div class="panel-body">-->
+
+                    <!--&lt;!&ndash;img class="img-responsive" src="//placehold.it/300/77CCDD/66BBCC"&ndash;&gt;-->
+
+                    <!--<div class="well">-->
+                        <!--<img src="images/bg_iphone.png" class="img-responsive">-->
+                        <!--<h3><a href="http://getbootstrap.com">Bootstrap 3 is Here.</a></h3>-->
+                        <!--<p>-->
+                            <!--In simple terms, a responsive web design figures out what resolution of-->
+                            <!--device it's being served on. Flexible grids then size correctly to fit-->
+                            <!--the screen.-->
+                        <!--</p>-->
+                        <!--<p><a href="http://www.bootply.com/bootstrap-3-migration-guide" target="ext">Read our migration guide for help with upgrading to Bootstrap 3.</a></p>-->
+                    <!--</div>-->
+
+
+                    <!--<hr>-->
+
+                    <!--&lt;!&ndash;<img class="img-responsive" src="//placehold.it/300x200/FFF">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a class="pull-left" href="#">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<img class="media-object" src="http://placehold.it/80/F0F0F0">&ndash;&gt;-->
+                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="media-body">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<h5 class="media-heading"><a href="/tagged/modal" target="ext" class="pull-right"><i class="glyphicon glyphicon-share"></i></a> <a href="#"><strong>Modal</strong></a></h5>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<small>Examples using the Bootstrap modal.</small><br>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="badge">87</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a class="pull-left" href="#">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<img class="media-object" src="http://placehold.it/80/F0F0F0">&ndash;&gt;-->
+                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="media-body">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<h5 class="media-heading"><a href="/tagged/slider" target="ext" class="pull-right"><i class="glyphicon glyphicon-share"></i></a> <a href="#"><strong>Carousel</strong></a></h5>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<small>How to use the Bootstrap slider.</small><br>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="badge">322</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a class="pull-left" href="#">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<img class="media-object" src="http://placehold.it/80/F0F0F0">&ndash;&gt;-->
+                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="media-body">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<h5 class="media-heading"><a href="/tagged/typography" target="ext" class="pull-right"><i class="glyphicon glyphicon-share"></i></a> <a href="#"><strong>Typography</strong></a></h5>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<small>See the various textual elements and options.</small><br>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="badge">44</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="media">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a class="pull-left" href="#">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<img class="media-object" src="http://placehold.it/80/F0F0F0">&ndash;&gt;-->
+                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="media-body">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<h5 class="media-heading"><a href="/tagged/media" target="ext" class="pull-right"><i class="glyphicon glyphicon-share"></i></a> <a href="#"><strong>@Media</strong></a></h5>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<small>Use @media queries to get the layout you want.</small><br>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="badge">119</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                <!--</div>-->
+            <!--</div>&lt;!&ndash;/panel&ndash;&gt;-->
+
+            <!--<div class="panel">-->
+                <!--<div class="panel-heading" style="background-color:#555;color:#eee;">Featured Project</div>-->
+                <!--<div class="panel-body">-->
+
+                    <!--&lt;!&ndash;img class="img-responsive" src="//placehold.it/300/77CCDD/66BBCC"&ndash;&gt;-->
+
+                    <!--<div class="well">-->
+                        <!--<img src="images/bg_iphone.png" class="img-responsive">-->
+                        <!--<h3><a href="http://getbootstrap.com">Bootstrap 3 is Here.</a></h3>-->
+                        <!--<p>-->
+                            <!--In simple terms, a responsive web design figures out what resolution of-->
+                            <!--device it's being served on. Flexible grids then size correctly to fit-->
+                            <!--the screen.-->
+                        <!--</p>-->
+                        <!--<p><a href="http://www.bootply.com/bootstrap-3-migration-guide" target="ext">Read our migration guide for help with upgrading to Bootstrap 3.</a></p>-->
+                    <!--</div>-->
+
+
+                    <!--<hr/>-->
+
+                <!--</div>-->
+            <!--</div>&lt;!&ndash;/panel&ndash;&gt;-->
+        <!--</div>-->
+        <!-- right content column-->
+        <div class="col-md-8" id="content">
+            <div class="panel">
+                <div class="panel-heading" style="background-color:#111;color:#fff;">Our Story</div>
+                <div class="panel-body">
+
+                    <div class="row">
+                        <div class="col-md-8">
+
+                            <center>
+                                <img src="images/logo.png" class="img-responsive" width="150" height="120"/>
+                            </center><br/>
+                            <h2>About Us</h2>
+
+
+                            2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.
+                            <br><br>  "Mobile first" and "unobtrusive JavaScript" (AKA: "progressive enhancement") are strategies for when a new site design is being considered. These are related concepts that predated RWD: browsers of basic mobile phones do not understand JavaScript or media queries, so the recommended practice is to create a basic web site then enhance it for smart phones and PCs—rather than try "graceful degradation" to make a complex, image-heavy site work on the most basic mobile phones.
+                            <br><br>
+                            Media Queries is a CSS3 module allowing content rendering to adapt to conditions such as screen resolution (e.g. smartphone vs. high definition screen). It became a W3C recommended standard in June 2012.[1] and is a cornerstone technology of Responsive Web Design.
+                            <hr>
+
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <h1>There is still a lot to be said about the Responsive Web.</h1>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" style="padding: 20px;margin-top: 20px">
+                                <div class="card-image">
+                                    <h3><a href="http://getbootstrap.com">Our Mission</a></h3>
+                                    <p>
+                                        In simple terms, a responsive web design figures out what resolution of
+                                        device it's being served on. Flexible grids then size correctly to fit
+                                        the screen.
+                                    </p>
+
+                                </div>
+
+                            </div>
+                            <br/>
+                            <div class="card" style="padding: 20px;">
+                                <div class="card-image">
+                                    <h3><a href="http://getbootstrap.com">Our Vision</a></h3>
+                                    <p>
+                                        In simple terms, a responsive web design figures out what resolution of
+                                        device it's being served on. Flexible grids then size correctly to fit
+                                        the screen.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <br/>
+                            <div class="card" style="padding: 20px;">
+                                <div class="card-image">
+                                    <h3><a href="http://getbootstrap.com">Core Values</a></h3>
+                                    <p>
+                                        In simple terms, a responsive web design figures out what resolution of
+                                        device it's being served on. Flexible grids then size correctly to fit
+                                        the screen.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!--<div class="well text-center">-->
+                    <!--<h1>Centered Text</h1>-->
+                    <!--This was a 2.x challenge that seems a little easier in 3.-->
+                    <!--<br><br>-->
+                    <!--<div style="font-size:70pt">-->
+                    <!--<i class="glyphicon glyphicon-4x glyphicon-camera"></i>-->
+                    <!--<i class="glyphicon glyphicon-4x glyphicon-camera"></i>-->
+                    <!--<i class="glyphicon glyphicon-4x glyphicon-camera"></i>-->
+                    <!--</div>-->
+
+                    <!--</div>-->
+
+                    <!--<hr>-->
+
+                    <!--<h2>CSS3</h2>-->
+                    <!--<img src="//placehold.it/150x100/EEEEEE" class="img-responsive pull-right">-->
+                    <!--To understand the RWD approach, you must first understand CSS - the basis of responsive design. CSS enables the developer to use percentage-based (AKA fluid or proportion-based) grids, CSS3 media queries. The web site then adapts to multiple devices (desktop, laptop, tablet, smartphone) and display conditions such as browser size and screen resolution.-->
+
+                    <!--<br><br>-->
+                    <!--<button class="btn btn-default">More</button>-->
+
+
+                </div><!--/panel-body-->
+            </div><!--/panel-->
+            <!--/end right column-->
+        </div>
+<div class="col-lg-2">
+    <div class="panel">
+        <div class="panel-heading" style="background-color:#555;color:#eee;">Knowledge Hub</div>
+        <div class="panel-body">
+
+            <!--img class="img-responsive" src="//placehold.it/300/77CCDD/66BBCC"-->
+
+            <div >
+                <img src="images/blue.jpg" class="img-responsive">
+                <h3><a href="http://getbootstrap.com">Bootstrap 3 is Here.</a></h3>
+
+                <p><a href="http://www.bootply.com/bootstrap-3-migration-guide" target="ext">Read our migration guide for help with upgrading to Bootstrap 3.</a></p>
+            </div>
+
+
+
+
+        </div>
+    </div><!--/panel-->
+</div>
+
+
+    </div>
+    <footer class="container-fluid" style="width: 100%;height:150px;background-image: url(images/blue.jpg);margin:0px;padding: 20px;border-bottom: 3px solid #fff;border-top: 3px solid #fff;">
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="row" style="padding: 30px;">
+                    <div class="col-md-2">
+                        <a href="aboutus.html" style="color: #fff;"><p>  About us</p> </a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="ourprojects.html" style="color: #fff;"><p>  Projects</p> </a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#" style="color: #fff;"><p> Careers</p> </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" style="color: #fff;"><p> Knowledge Hub</p> </a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#" style="color: #fff;"><p> Contacts</p> </a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="#" style="color: #fff;"><p> Contacts</p> </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row" style="text-align: center;padding: 30px;">
+
+                    <div class="col-md-4"><i class="fa-3x fa fa-facebook-square" style="color:#ffffff"></i></div>
+                    <div class="col-md-4"><i class="fa-3x fa fa-twitter-square" style="margin-right:15px;color:#ffffff"></i></div>
+                    <div class="col-md-4"><i class="fa-3x fa fa-linkedin-square" style="margin-right:15px;color:#ffffff"></i></div>
+                </div>
+            </div>
+            <div class="col-md-2"  style="text-align: center;padding: 30px;">
+                <img src="images/logo.png" class="img-responsive"/>
+            </div>
+
+        </div>
+
+    </footer>
+    <footer class="container-fluid" style="width: 100%;height:50px;background-color: #555555;margin:0px;padding: 20px;"></footer>
+
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+        $('.carousel').carousel({
+            interval: 8000 //changes the speed
+        })
+
+
+        $('#myTab a').click(function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    </script>
+
+</body>
+
+</html>
